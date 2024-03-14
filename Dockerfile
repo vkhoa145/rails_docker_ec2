@@ -46,7 +46,7 @@ RUN apt-get update -qq && \
 COPY Gemfile Gemfile.lock ./
 
 # Install gems
-RUN bundle install --jobs $(nproc) --retry 5
+RUN SECRET_KEY_BASE_DUMMY=1 bundle install --jobs $(nproc) --retry 5
 
 # Copy the rest of the application code into the container
 COPY . .
