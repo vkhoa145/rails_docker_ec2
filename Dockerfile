@@ -32,8 +32,12 @@ FROM ruby:3.2.0
 # Set environment variables for the Rails app
 ENV RAILS_ENV=production \
     RAILS_SERVE_STATIC_FILES=true \
-    RAILS_LOG_TO_STDOUT=true
-
+    RAILS_LOG_TO_STDOUT=true \
+    RAILS_MASTER_KEY=fdb69f1e7b48b7cb1245aa4874632bc5
+# ENV RAILS_LOG_TO_STDOUT="1" \
+#     RAILS_SERVE_STATIC_FILES="true" \
+#     RAILS_ENV="production" \
+#     BUNDLE_WITHOUT="development"
 # Set up the working directory in the container
 WORKDIR /app
 
